@@ -6,7 +6,6 @@ int main()
 	std::cout << "ABCD * X = DCBA where X > 1 and X < 10" << std::endl;
 
 	int X = 0;
-
 	while(true)
 	{
 		std::cout << "Enter Multiplier between 2 and 9: ";
@@ -17,6 +16,7 @@ int main()
 		}
 	}
 
+	bool equation_found = false;
 	for(int num1 = 9999; num1 > 0; --num1)
 	{
 		char str_num1[5];
@@ -36,8 +36,14 @@ int main()
 		if(strcmp(str_num1_rev, str_num2) == 0)
 		{
 			std::cout << num2 << " * " << X << " = " << num1 << std::endl;
+			equation_found = true;
 			break;
 		}
+	}
+
+	if(!equation_found)
+	{
+		std::cout << "No equation found!" << std::endl;
 	}
 
 	return 0;
