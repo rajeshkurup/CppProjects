@@ -28,7 +28,7 @@ int main() {
 
     print_array(*intListPtr);
 
-    std::cout << "ptr_count=" << intListPtr.use_count() << std::endl;
+    std::cout << "ptr_count=" << intListPtr.use_count() << std::endl; 
 
     {
         sptr<dyn_arr<int>> intArrPtr = intListPtr;
